@@ -1,8 +1,9 @@
 function Biblioteca() {
     return (
         <div>
-            <h1>Mi Biblioteca</h1>
-            <p>Aquí estarán tus videojuegos.</p>
+            <h1>Mi biblioteca</h1>
+
+            <p>Aquí aparecerán tus videojuegos.</p>
         </div>
     );
 }
