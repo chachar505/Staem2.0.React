@@ -6,7 +6,8 @@ export const videojuegos = [
         plataforma: "Nintendo Switch",
         anio: 2020,
         estado: "pendiente",
-        imagen: "/animal-crossing-new-horizons.jpg"
+        imagen: "/animal-crossing-new-horizons.jpg",
+        enlaceCompra: "https://www.nintendo.com/us/store/products/animal-crossing-new-horizons-switch/"
     },
     {
         id: 2,
@@ -15,7 +16,8 @@ export const videojuegos = [
         plataforma: "PC",
         anio: 2020,
         estado: "pendiente",
-        imagen: "/cyberpunk-2077.jpg"
+        imagen: "/cyberpunk-2077.jpg",
+        enlaceCompra: "https://store.steampowered.com/app/1091500/Cyberpunk_2077/"
     },
     {
         id: 3,
@@ -24,7 +26,8 @@ export const videojuegos = [
         plataforma: "PC",
         anio: 2020,
         estado: "jugado",
-        imagen: "/doom-eternal.jpg"
+        imagen: "/doom-eternal.jpg",
+        enlaceCompra: "https://store.steampowered.com/app/782330/DOOM_Eternal/"
     },
     {
         id: 4,
@@ -33,7 +36,8 @@ export const videojuegos = [
         plataforma: "PC",
         anio: 2022,
         estado: "pendiente",
-        imagen: "/elden-ring.jpg"
+        imagen: "/elden-ring.jpg",
+        enlaceCompra: "https://store.steampowered.com/app/1245620/ELDEN_RING/"
     },
     {
         id: 5,
@@ -42,7 +46,8 @@ export const videojuegos = [
         plataforma: "Xbox",
         anio: 2021,
         estado: "jugado",
-        imagen: "/forza-horizon-5.jpg"
+        imagen: "/forza-horizon-5.jpg",
+        enlaceCompra: "https://www.xbox.com/es-CL/games/store/forza-horizon-5/9NNX1VVR3KNQ"
     },
     {
         id: 6,
@@ -51,7 +56,8 @@ export const videojuegos = [
         plataforma: "PlayStation",
         anio: 2018,
         estado: "jugado",
-        imagen: "/god-of-war.jpg"
+        imagen: "/god-of-war.jpg",
+        enlaceCompra: "https://store.playstation.com/es-cl/product/UP9000-CUSA07408_00-GODOFWARDDE00000/"
     },
     {
         id: 7,
@@ -60,7 +66,8 @@ export const videojuegos = [
         plataforma: "PC",
         anio: 2020,
         estado: "pendiente",
-        imagen: "/hades.jpg"
+        imagen: "/hades.jpg",
+        enlaceCompra: "https://store.steampowered.com/app/1145360/Hades/"
     },
     {
         id: 8,
@@ -69,7 +76,8 @@ export const videojuegos = [
         plataforma: "Xbox",
         anio: 2021,
         estado: "pendiente",
-        imagen: "/halo-infinite.jpg"
+        imagen: "/halo-infinite.jpg",
+        enlaceCompra: "https://www.xbox.com/es-CL/games/store/Halo-Infinite/9NP1P1WFS0LB"
     },
     {
         id: 9,
@@ -78,7 +86,8 @@ export const videojuegos = [
         plataforma: "PC",
         anio: 2011,
         estado: "jugado",
-        imagen: "/minecraft.jpg"
+        imagen: "/minecraft.jpg",
+        enlaceCompra: "https://www.minecraft.net/en-us/store/minecraft-java-bedrock-edition-pc"
     },
     {
         id: 10,
@@ -87,7 +96,8 @@ export const videojuegos = [
         plataforma: "Nintendo Switch",
         anio: 2022,
         estado: "pendiente",
-        imagen: "/pokemon-escarlata.jpg"
+        imagen: "/pokemon-escarlata.jpg",
+        enlaceCompra: "https://www.nintendo.com/us/store/products/pokemon-scarlet-switch/"
     },
     {
         id: 11,
@@ -96,7 +106,8 @@ export const videojuegos = [
         plataforma: "PC",
         anio: 2011,
         estado: "jugado",
-        imagen: "/portal-2.jpg"
+        imagen: "/portal-2.jpg",
+        enlaceCompra: "https://store.steampowered.com/app/620/Portal_2/"
     },
     {
         id: 12,
@@ -105,7 +116,8 @@ export const videojuegos = [
         plataforma: "PC",
         anio: 2018,
         estado: "pendiente",
-        imagen: "/red-dead-redemption-2.jpg"
+        imagen: "/red-dead-redemption-2.jpg",
+        enlaceCompra: "https://store.steampowered.com/app/1174180/Red_Dead_Redemption_2/"
     },
     {
         id: 13,
@@ -114,7 +126,8 @@ export const videojuegos = [
         plataforma: "PC",
         anio: 2023,
         estado: "jugado",
-        imagen: "/resident-evil-4.jpg"
+        imagen: "/resident-evil-4.jpg",
+        enlaceCompra: "https://store.steampowered.com/app/2050650/Resident_Evil_4/"
     },
     {
         id: 14,
@@ -123,7 +136,8 @@ export const videojuegos = [
         plataforma: "PC",
         anio: 2016,
         estado: "jugado",
-        imagen: "/stardew-valley.jpg"
+        imagen: "/stardew-valley.jpg",
+        enlaceCompra: "https://store.steampowered.com/app/413150/Stardew_Valley/"
     },
     {
         id: 15,
@@ -132,7 +146,8 @@ export const videojuegos = [
         plataforma: "PC",
         anio: 2023,
         estado: "pendiente",
-        imagen: "/starfield.jpg"
+        imagen: "/starfield.jpg",
+        enlaceCompra: "https://www.xbox.com/es-CL/games/store/starfield/9NCJSXWZTP88"
     },
     {
         id: 16,
@@ -141,7 +156,8 @@ export const videojuegos = [
         plataforma: "PC",
         anio: 2023,
         estado: "jugado",
-        imagen: "/street-fighter-6.jpg"
+        imagen: "/street-fighter-6.jpg",
+        enlaceCompra: "https://store.steampowered.com/app/1364780/Street_Fighter_6/"
     },
     {
         id: 17,
@@ -150,7 +166,8 @@ export const videojuegos = [
         plataforma: "Nintendo Switch",
         anio: 2017,
         estado: "jugado",
-        imagen: "/super-mario-odyssey.jpg"
+        imagen: "/super-mario-odyssey.jpg",
+        enlaceCompra: "https://supermario.nintendo.com/"
     },
     {
         id: 18,
@@ -159,7 +176,8 @@ export const videojuegos = [
         plataforma: "PlayStation",
         anio: 2020,
         estado: "pendiente",
-        imagen: "/the-last-of-us-part-2.jpg"
+        imagen: "/the-last-of-us-part-2.jpg",
+        enlaceCompra: "https://store.playstation.com/es-cl/product/UP9000-CUSA07820_00-THELASTOFUSPART2/"
     },
     {
         id: 19,
@@ -168,7 +186,8 @@ export const videojuegos = [
         plataforma: "PC",
         anio: 2015,
         estado: "jugado",
-        imagen: "/the-witcher-3.jpg"
+        imagen: "/the-witcher-3.jpg",
+        enlaceCompra: "https://store.steampowered.com/app/292030/The_Witcher_3_Wild_Hunt/"
     },
     {
         id: 20,
@@ -177,6 +196,7 @@ export const videojuegos = [
         plataforma: "Nintendo Switch",
         anio: 2017,
         estado: "jugado",
-        imagen: "/zelda-breath-of-the-wild.jpg"
+        imagen: "/zelda-breath-of-the-wild.jpg",
+        enlaceCompra: "https://www.nintendo.com/us/store/products/the-legend-of-zelda-breath-of-the-wild-switch/"
     }
 ];

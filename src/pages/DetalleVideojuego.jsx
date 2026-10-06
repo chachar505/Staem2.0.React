@@ -2,6 +2,8 @@ import { useParams, Link } from "react-router-dom";
 import { videojuegos } from "../data/videojuegos";
 import { agregarBiblioteca } from "../biblioteca";
 
+import "./DetalleVideojuego.css";
+
 function DetalleVideojuego() {
     const { id } = useParams();
 
@@ -16,119 +18,105 @@ function DetalleVideojuego() {
 
     if (!videojuego) {
         return (
-            <main className="container py-4">
-                <h1>Videojuego no encontrado</h1>
+            <main className="detalle-page">
+                <div className="detalle-no-encontrado">
+                    <h1>
+                        Videojuego no encontrado
+                    </h1>
 
-                <Link
-                    to="/catalogo"
-                    className="btn btn-primary mt-3"
-                >
-                    Volver al catálogo
-                </Link>
+                    <Link to="/catalogo">
+                        Volver al catálogo
+                    </Link>
+                </div>
             </main>
         );
     }
 
-    const plataforma = videojuego.plataforma.toLowerCase();
-
-    let tienda = null;
-
-    if (plataforma.includes("nintendo")) {
-        tienda = {
-            nombre: "Nintendo eShop",
-            descripcion: "Busca este videojuego en la tienda oficial de Nintendo.",
-            url: "https://www.nintendo.com/us/store/"
-        };
-    } else if (plataforma.includes("pc")) {
-        tienda = {
-            nombre: "Steam",
-            descripcion: "Busca este videojuego en Steam.",
-            url: "https://store.steampowered.com/"
-        };
-    } else if (plataforma.includes("playstation")) {
-        tienda = {
-            nombre: "PlayStation Store",
-            descripcion: "Busca este videojuego en la tienda oficial de PlayStation.",
-            url: "https://store.playstation.com/"
-        };
-    } else if (plataforma.includes("xbox")) {
-        tienda = {
-            nombre: "Xbox",
-            descripcion: "Busca este videojuego en la tienda oficial de Xbox.",
-            url: "https://www.xbox.com/games/store"
-        };
-    }
-
     return (
-        <main className="container py-4">
-
+        <main className="detalle-page">
             <Link
                 to="/catalogo"
-                className="btn btn-secondary mb-4"
+                className="detalle-volver"
             >
                 ← Volver al catálogo
             </Link>
 
-            <div className="row">
+            <section className="detalle-card">
 
-                <div className="col-md-6">
+                <div className="detalle-imagen">
                     <img
                         src={videojuego.imagen}
-                        className="img-fluid rounded"
                         alt={videojuego.nombre}
                     />
                 </div>
 
-                <div className="col-md-6">
+                <div className="detalle-info">
 
-                    <h1>{videojuego.nombre}</h1>
-
-                    <p>
-                        <strong>Género:</strong>{" "}
-                        {videojuego.genero}
+                    <p className="detalle-etiqueta">
+                        VIDEOJUEGO
                     </p>
 
-                    <p>
-                        <strong>Plataforma:</strong>{" "}
-                        {videojuego.plataforma}
-                    </p>
+                    <h1>
+                        {videojuego.nombre}
+                    </h1>
 
-                    <p>
-                        <strong>Año:</strong>{" "}
-                        {videojuego.anio}
-                    </p>
+                    <div className="detalle-datos">
 
-                    <p>
-                        <strong>Estado:</strong>{" "}
+                        <div>
+                            <span>Género</span>
+
+                            <strong>
+                                {videojuego.genero}
+                            </strong>
+                        </div>
+
+                        <div>
+                            <span>Plataforma</span>
+
+                            <strong>
+                                {videojuego.plataforma}
+                            </strong>
+                        </div>
+
+                        <div>
+                            <span>Año</span>
+
+                            <strong>
+                                {videojuego.anio}
+                            </strong>
+                        </div>
+
+                    </div>
+
+                    <div className="detalle-estado">
                         {videojuego.estado}
-                    </p>
+                    </div>
 
                     <button
-                        className="btn btn-primary"
+                        className="detalle-boton"
                         onClick={agregarJuego}
                     >
                         Agregar a mi biblioteca
                     </button>
 
+                    {videojuego.enlaceCompra && (
+                        <div className="detalle-compra">
 
-                    {tienda && (
-                        <div className="mt-5 p-4 border rounded bg-light">
+                            <p className="detalle-compra-titulo">
+                                ¿Dónde comprar?
+                            </p>
 
-                            <h2 className="h4">
-                                Dónde comprar
-                            </h2>
-
-                            <p className="text-muted">
-                                {tienda.descripcion}
+                            <p className="detalle-compra-texto">
+                                Encuentra este videojuego en su tienda oficial.
                             </p>
 
                             <a
-                                href={tienda.url}
+                                href={videojuego.enlaceCompra}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="btn btn-outline-primary"
+                                className="detalle-tienda"
                             >
-                                Ver en {tienda.nombre}
+                                Ir a la página del juego
                             </a>
 
                         </div>
@@ -136,8 +124,7 @@ function DetalleVideojuego() {
 
                 </div>
 
-            </div>
-
+            </section>
         </main>
     );
 }

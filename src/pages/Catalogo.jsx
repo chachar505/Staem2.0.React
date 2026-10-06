@@ -12,75 +12,99 @@ function Catalogo() {
 
     return (
         <main className="catalogo-page">
-            <div className="catalogo-encabezado">
-                <h1>Catálogo de videojuegos</h1>
 
-                <p>
-                    Explora nuestra colección de videojuegos
-                    y encuentra tu próximo juego favorito.
-                </p>
+            <div className="catalogo-encabezado">
+                <p>COLECCIÓN</p>
+
+                <h1>
+                    Catálogo de videojuegos
+                </h1>
+
+                <span>
+                    Explora nuestra colección de videojuegos.
+                </span>
             </div>
 
             <div className="catalogo-grid">
+
                 {videojuegos.map((videojuego) => (
-                    <div
-                        className="catalogo-card"
+
+                    <article
+                        className="juego-card"
                         key={videojuego.id}
                     >
+
                         <Link
                             to={`/videojuego/${videojuego.id}`}
-                            className="catalogo-imagen-link"
+                            className="juego-imagen-link"
                         >
-                            <img
-                                src={videojuego.imagen}
-                                alt={videojuego.nombre}
-                                className="catalogo-imagen"
-                            />
+
+                            <div className="juego-imagen">
+
+                                <img
+                                    src={videojuego.imagen}
+                                    alt={videojuego.nombre}
+                                />
+
+                            </div>
+
                         </Link>
 
-                        <div className="catalogo-contenido">
+                        <div className="juego-contenido">
+
                             <h2>
                                 {videojuego.nombre}
                             </h2>
 
-                            <p>
-                                <strong>Género:</strong>{" "}
-                                {videojuego.genero}
-                            </p>
+                            <div className="juego-datos">
 
-                            <p>
-                                <strong>Plataforma:</strong>{" "}
-                                {videojuego.plataforma}
-                            </p>
+                                <p>
+                                    <strong>Género</strong>
+                                    <span>{videojuego.genero}</span>
+                                </p>
 
-                            <p>
-                                <strong>Año:</strong>{" "}
-                                {videojuego.anio}
-                            </p>
+                                <p>
+                                    <strong>Plataforma</strong>
+                                    <span>{videojuego.plataforma}</span>
+                                </p>
 
-                            <span className="catalogo-estado">
+                                <p>
+                                    <strong>Año</strong>
+                                    <span>{videojuego.anio}</span>
+                                </p>
+
+                            </div>
+
+                            <span className="juego-estado">
                                 {videojuego.estado}
                             </span>
 
-                            <Link
-                                to={`/videojuego/${videojuego.id}`}
-                                className="boton-detalles"
-                            >
-                                Ver detalles
-                            </Link>
+                            <div className="juego-botones">
 
-                            <button
-                                className="boton-biblioteca"
-                                onClick={() =>
-                                    agregarJuego(videojuego)
-                                }
-                            >
-                                Agregar a mi biblioteca
-                            </button>
+                                <Link
+                                    to={`/videojuego/${videojuego.id}`}
+                                    className="juego-detalles"
+                                >
+                                    Ver detalles
+                                </Link>
+
+                                <button
+                                    className="juego-agregar"
+                                    onClick={() => agregarJuego(videojuego)}
+                                >
+                                    Agregar a mi biblioteca
+                                </button>
+
+                            </div>
+
                         </div>
-                    </div>
+
+                    </article>
+
                 ))}
+
             </div>
+
         </main>
     );
 }

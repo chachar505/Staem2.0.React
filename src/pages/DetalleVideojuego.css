@@ -1,0 +1,423 @@
+.detalle-page {
+    min-height: 100vh;
+    padding: 45px 7%;
+    background: #faf8fd;
+}
+
+.detalle-volver {
+    display: inline-block;
+    margin-bottom: 25px;
+
+    color: #8051a0;
+    font-size: 14px;
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.detalle-volver:hover {
+    color: #64387e;
+}
+
+.detalle-card {
+    width: 100%;
+    max-width: 1050px;
+    min-height: 520px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 430px 1fr;
+
+    background: white;
+
+    border: 1px solid #eadff0;
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 30px rgba(115, 72, 140, 0.09);
+}
+
+.detalle-imagen {
+    min-width: 0;
+
+    background: #f7f2fa;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+}
+
+.detalle-imagen img {
+    display: block;
+
+    width: 100%;
+    height: 470px;
+
+    object-fit: contain;
+
+    border-radius: 10px;
+}
+
+.detalle-info {
+    padding: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.detalle-etiqueta {
+    margin: 0 0 10px;
+
+    color: #a56fc5;
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+.detalle-info h1 {
+    margin: 0 0 35px;
+
+    color: #44275c;
+
+    font-size: 38px;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+.detalle-datos {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+
+    margin-bottom: 22px;
+}
+
+.detalle-datos div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 12px;
+
+    border-bottom: 1px solid #f0e8f4;
+}
+
+.detalle-datos span {
+    color: #8a7a94;
+    font-size: 14px;
+}
+
+.detalle-datos strong {
+    color: #5b3b6e;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: right;
+}
+
+.detalle-estado {
+    align-self: flex-start;
+
+    padding: 7px 14px;
+
+    background: #f2e7f8;
+    color: #8051a0;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    margin-bottom: 22px;
+}
+
+.detalle-boton {
+    width: 100%;
+
+    padding: 13px 20px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: #8b52b5;
+    color: white;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.detalle-boton:hover {
+    background: #76439b;
+}
+
+.detalle-compra {
+    margin-top: 24px;
+    padding-top: 20px;
+
+    border-top: 1px solid #f0e8f4;
+}
+
+.detalle-compra-titulo {
+    margin: 0 0 6px;
+
+    color: #5b3b6e;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.detalle-compra-texto {
+    margin: 0 0 12px;
+
+    color: #8a7a94;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.detalle-tienda {
+    display: inline-block;
+
+    padding: 9px 15px;
+
+    border: 1px solid #cba9dc;
+    border-radius: 9px;
+
+    background: #faf5fd;
+    color: #77469a;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: 0.2s;
+}
+
+.detalle-tienda:hover {
+    background: #f2e7f8;
+    border-color: #a875c3;
+    color: #64387e;
+}
+
+.detalle-no-encontrado {
+    max-width: 600px;
+
+    margin: 100px auto;
+    padding: 50px;
+
+    background: white;
+
+    border: 1px solid #eadff0;
+    border-radius: 18px;
+
+    text-align: center;
+}
+
+.detalle-no-encontrado h1 {
+    color: #44275c;
+    margin-bottom: 20px;
+}
+
+.detalle-no-encontrado a {
+    color: #8051a0;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+/* TABLET */
+
+@media (max-width: 850px) {
+
+    .detalle-page {
+        padding: 35px 5%;
+    }
+
+    .detalle-card {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .detalle-imagen {
+        padding: 25px;
+    }
+
+    .detalle-imagen img {
+        height: 400px;
+    }
+
+    .detalle-info {
+        padding: 40px 30px;
+    }
+}
+
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    .detalle-page {
+        padding: 20px 14px 35px;
+        background: #f8f4fb;
+    }
+
+    .detalle-volver {
+        margin: 5px 0 18px 3px;
+
+        font-size: 13px;
+    }
+
+    .detalle-card {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        border-radius: 18px;
+
+        box-shadow: 0 8px 25px rgba(115, 72, 140, 0.10);
+    }
+
+    .detalle-imagen {
+        width: 100%;
+        min-height: 320px;
+
+        padding: 20px;
+
+        background: #f5eef9;
+    }
+
+    .detalle-imagen img {
+        width: 100%;
+        height: 320px;
+
+        object-fit: contain;
+
+        border-radius: 8px;
+    }
+
+    .detalle-info {
+        padding: 28px 22px 30px;
+    }
+
+    .detalle-etiqueta {
+        margin-bottom: 8px;
+
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .detalle-info h1 {
+        margin-bottom: 25px;
+
+        font-size: 27px;
+        line-height: 1.2;
+    }
+
+    .detalle-datos {
+        gap: 14px;
+        margin-bottom: 18px;
+    }
+
+    .detalle-datos div {
+        padding-bottom: 10px;
+    }
+
+    .detalle-datos span {
+        font-size: 13px;
+    }
+
+    .detalle-datos strong {
+        max-width: 55%;
+
+        font-size: 13px;
+    }
+
+    .detalle-estado {
+        margin-bottom: 18px;
+
+        padding: 6px 12px;
+
+        font-size: 11px;
+    }
+
+    .detalle-boton {
+        padding: 13px 15px;
+
+        font-size: 13px;
+
+        border-radius: 8px;
+    }
+
+    .detalle-compra {
+        margin-top: 20px;
+        padding-top: 18px;
+    }
+
+    .detalle-compra-titulo {
+        font-size: 14px;
+    }
+
+    .detalle-compra-texto {
+        font-size: 12px;
+    }
+
+    .detalle-tienda {
+        width: 100%;
+
+        padding: 11px;
+
+        text-align: center;
+
+        font-size: 12px;
+    }
+
+    .detalle-no-encontrado {
+        margin: 60px auto;
+        padding: 35px 20px;
+    }
+
+    .detalle-no-encontrado h1 {
+        font-size: 25px;
+    }
+}
+
+
+/* CELULARES MUY PEQUEÑOS */
+
+@media (max-width: 380px) {
+
+    .detalle-page {
+        padding: 18px 10px 30px;
+    }
+
+    .detalle-imagen {
+        min-height: 280px;
+        padding: 15px;
+    }
+
+    .detalle-imagen img {
+        height: 280px;
+    }
+
+    .detalle-info {
+        padding: 25px 18px;
+    }
+
+    .detalle-info h1 {
+        font-size: 24px;
+    }
+
+    .detalle-datos span,
+    .detalle-datos strong {
+        font-size: 12px;
+    }
+}
