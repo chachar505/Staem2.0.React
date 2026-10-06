@@ -1,0 +1,402 @@
+.inicio-page {
+    min-height: 100vh;
+    background: #f7f4fc;
+    color: #2d2340;
+}
+
+
+/* PORTADA */
+
+.inicio-hero {
+    min-height: 520px;
+    padding: 70px 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 70px;
+
+    background: linear-gradient(
+            120deg,
+            #eee3f8,
+            #faf8fd
+    );
+}
+
+.inicio-hero-contenido {
+    max-width: 600px;
+}
+
+.inicio-etiqueta {
+    color: #7b3fb5;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.inicio-hero h1 {
+    color: #342344;
+    font-size: 50px;
+    line-height: 1.12;
+    margin: 0 0 25px;
+}
+
+.inicio-hero h1 span {
+    color: #7b3fb5;
+}
+
+.inicio-descripcion {
+    color: #71677c;
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 550px;
+    margin-bottom: 30px;
+}
+
+
+/* BOTONES */
+
+.inicio-botones {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.inicio-boton {
+    display: inline-block;
+    padding: 13px 22px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+.inicio-boton.principal {
+    background: #7b3fb5;
+    color: white;
+    box-shadow: 0 5px 12px rgba(123, 63, 181, 0.25);
+}
+
+.inicio-boton.principal:hover {
+    background: #682f9b;
+    transform: translateY(-2px);
+}
+
+.inicio-boton.secundario {
+    background: white;
+    color: #7b3fb5;
+    border: 1px solid #cdb5df;
+}
+
+.inicio-boton.secundario:hover {
+    background: #f1e8f8;
+}
+
+
+/* JUEGO PRINCIPAL */
+
+.juego-principal {
+    position: relative;
+
+    width: 330px;
+    height: 430px;
+
+    flex-shrink: 0;
+
+    border-radius: 14px;
+    overflow: hidden;
+
+    background: white;
+
+    box-shadow: 0 20px 45px rgba(63, 36, 82, 0.25);
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.juego-principal:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(63, 36, 82, 0.3);
+}
+
+.juego-principal img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.juego-principal-info {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 25px;
+
+    background: linear-gradient(
+            transparent,
+            rgba(30, 18, 42, 0.9)
+    );
+
+    color: white;
+}
+
+.juego-principal-info p {
+    font-size: 13px;
+    margin: 0 0 5px;
+    color: #d8b9ee;
+}
+
+.juego-principal-info h2 {
+    font-size: 24px;
+    margin: 0 0 10px;
+}
+
+.juego-principal-info span {
+    font-size: 14px;
+    color: white;
+}
+
+
+/* SECCION DESTACADOS */
+
+.destacados {
+    background: white;
+    padding: 75px 7%;
+}
+
+.destacados-encabezado {
+    max-width: 1150px;
+    margin: 0 auto 35px;
+
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.seccion-etiqueta {
+    color: #9b6bc2;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+}
+
+.destacados-encabezado h2 {
+    color: #4f2871;
+    font-size: 32px;
+
+    margin: 0 0 8px;
+}
+
+.destacados-encabezado p {
+    color: #746980;
+    margin: 0;
+}
+
+.ver-todos {
+    color: #7b3fb5;
+    text-decoration: none;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.ver-todos:hover {
+    text-decoration: underline;
+}
+
+
+/* TARJETAS */
+
+.destacados-grid {
+    max-width: 1150px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 22px;
+}
+
+.destacado-card {
+    background: #faf8fd;
+
+    border: 1px solid #e4dcef;
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    text-decoration: none;
+
+    box-shadow: 0 4px 12px rgba(91, 44, 131, 0.08);
+
+    transition: 0.2s;
+}
+
+.destacado-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+            0 10px 22px rgba(91, 44, 131, 0.15);
+}
+
+.destacado-card img {
+    width: 100%;
+    height: 220px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.destacado-info {
+    padding: 18px;
+}
+
+.destacado-info h3 {
+    color: #3d2854;
+
+    font-size: 18px;
+
+    margin: 0 0 8px;
+}
+
+.destacado-info p {
+    color: #746980;
+
+    font-size: 14px;
+
+    margin: 0 0 15px;
+}
+
+.destacado-info span {
+    color: #7b3fb5;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* SECCION FINAL */
+
+.inicio-final {
+    padding: 55px 8%;
+
+    background: #e9dcf4;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.inicio-final h2 {
+    color: #512675;
+
+    font-size: 30px;
+
+    margin: 0 0 10px;
+}
+
+.inicio-final p {
+    color: #746980;
+
+    margin: 0;
+}
+
+.inicio-boton.final {
+    background: #7b3fb5;
+    color: white;
+
+    white-space: nowrap;
+}
+
+.inicio-boton.final:hover {
+    background: #682f9b;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 950px) {
+
+    .inicio-hero {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 60px 6%;
+    }
+
+    .inicio-hero-contenido {
+        max-width: 700px;
+    }
+
+    .inicio-descripcion {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .inicio-botones {
+        justify-content: center;
+    }
+
+    .juego-principal {
+        width: 280px;
+        height: 370px;
+    }
+
+    .destacados-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .inicio-final {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .inicio-hero h1 {
+        font-size: 38px;
+    }
+
+    .inicio-descripcion {
+        font-size: 16px;
+    }
+
+    .juego-principal {
+        width: 250px;
+        height: 340px;
+    }
+
+    .destacados {
+        padding: 55px 5%;
+    }
+
+    .destacados-encabezado {
+        align-items: start;
+        flex-direction: column;
+    }
+
+    .destacados-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .inicio-final {
+        padding: 50px 6%;
+    }
+}

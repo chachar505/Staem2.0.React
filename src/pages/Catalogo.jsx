@@ -1,50 +1,82 @@
+import { Link } from "react-router-dom";
 import { videojuegos } from "../data/videojuegos";
+import { agregarBiblioteca } from "../biblioteca";
+
+import "./Catalogo.css";
 
 function Catalogo() {
+    const agregarJuego = (videojuego) => {
+        agregarBiblioteca(videojuego);
+        alert(`${videojuego.nombre} fue agregado a tu biblioteca`);
+    };
+
     return (
-        <main className="container py-4">
-            <div className="text-center mb-4">
+        <main className="catalogo-page">
+            <div className="catalogo-encabezado">
                 <h1>Catálogo de videojuegos</h1>
-                <p className="text-muted">
-                    Explora nuestra colección de videojuegos.
+
+                <p>
+                    Explora nuestra colección de videojuegos
+                    y encuentra tu próximo juego favorito.
                 </p>
             </div>
 
-            <div className="row g-4">
+            <div className="catalogo-grid">
                 {videojuegos.map((videojuego) => (
-                    <div className="col-12 col-md-6 col-lg-4" key={videojuego.id}>
-                        <div className="card h-100 shadow-sm">
-
+                    <div
+                        className="catalogo-card"
+                        key={videojuego.id}
+                    >
+                        <Link
+                            to={`/videojuego/${videojuego.id}`}
+                            className="catalogo-imagen-link"
+                        >
                             <img
                                 src={videojuego.imagen}
-                                className="card-img-top"
                                 alt={videojuego.nombre}
-                                style={{ height: "250px", objectFit: "cover" }}
+                                className="catalogo-imagen"
                             />
+                        </Link>
 
-                            <div className="card-body">
-                                <h2 className="card-title h5">
-                                    {videojuego.nombre}
-                                </h2>
+                        <div className="catalogo-contenido">
+                            <h2>
+                                {videojuego.nombre}
+                            </h2>
 
-                                <p className="card-text">
-                                    <strong>Género:</strong> {videojuego.genero}
-                                </p>
+                            <p>
+                                <strong>Género:</strong>{" "}
+                                {videojuego.genero}
+                            </p>
 
-                                <p className="card-text">
-                                    <strong>Plataforma:</strong>{" "}
-                                    {videojuego.plataforma}
-                                </p>
+                            <p>
+                                <strong>Plataforma:</strong>{" "}
+                                {videojuego.plataforma}
+                            </p>
 
-                                <p className="card-text">
-                                    <strong>Año:</strong> {videojuego.anio}
-                                </p>
+                            <p>
+                                <strong>Año:</strong>{" "}
+                                {videojuego.anio}
+                            </p>
 
-                                <span className="badge text-bg-primary">
-                                    {videojuego.estado}
-                                </span>
-                            </div>
+                            <span className="catalogo-estado">
+                                {videojuego.estado}
+                            </span>
 
+                            <Link
+                                to={`/videojuego/${videojuego.id}`}
+                                className="boton-detalles"
+                            >
+                                Ver detalles
+                            </Link>
+
+                            <button
+                                className="boton-biblioteca"
+                                onClick={() =>
+                                    agregarJuego(videojuego)
+                                }
+                            >
+                                Agregar a mi biblioteca
+                            </button>
                         </div>
                     </div>
                 ))}
