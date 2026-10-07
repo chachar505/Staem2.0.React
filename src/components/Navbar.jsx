@@ -1,12 +1,21 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import "./Navbar.css";
 
 function Navbar() {
-    const [usuario, setUsuario] = useState(
-        JSON.parse(localStorage.getItem("usuarioLogueado"))
-    );
+    const [usuario, setUsuario] = useState(() => {
+        try {
+            const usuarioGuardado = localStorage.getItem("usuarioLogueado");
+
+            return usuarioGuardado
+                ? JSON.parse(usuarioGuardado)
+                : null;
+        } catch (error) {
+            localStorage.removeItem("usuarioLogueado");
+            return null;
+        }
+    });
 
     const cerrarSesion = () => {
         localStorage.removeItem("usuarioLogueado");
@@ -15,7 +24,6 @@ function Navbar() {
 
     return (
         <nav className="navbar">
-
             <div className="navbar-contenido">
 
                 <Link to="/" className="navbar-logo">
@@ -24,21 +32,41 @@ function Navbar() {
 
                 <div className="navbar-links">
 
-                    <Link to="/">
+                    <NavLink
+                        to="/"
+                        className={({ isActive }) =>
+                            isActive ? "activo" : ""
+                        }
+                    >
                         Inicio
-                    </Link>
+                    </NavLink>
 
-                    <Link to="/catalogo">
+                    <NavLink
+                        to="/catalogo"
+                        className={({ isActive }) =>
+                            isActive ? "activo" : ""
+                        }
+                    >
                         Catálogo
-                    </Link>
+                    </NavLink>
 
-                    <Link to="/biblioteca">
+                    <NavLink
+                        to="/biblioteca"
+                        className={({ isActive }) =>
+                            isActive ? "activo" : ""
+                        }
+                    >
                         Biblioteca
-                    </Link>
+                    </NavLink>
 
-                    <Link to="/contacto">
+                    <NavLink
+                        to="/contacto"
+                        className={({ isActive }) =>
+                            isActive ? "activo" : ""
+                        }
+                    >
                         Contacto
-                    </Link>
+                    </NavLink>
 
                     {usuario ? (
                         <div className="navbar-usuario-contenedor">
@@ -48,6 +76,7 @@ function Navbar() {
                             </span>
 
                             <button
+                                type="button"
                                 className="navbar-logout"
                                 onClick={cerrarSesion}
                             >
@@ -65,9 +94,7 @@ function Navbar() {
                     )}
 
                 </div>
-
             </div>
-
         </nav>
     );
 }
