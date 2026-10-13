@@ -41,3 +41,14 @@ export function cambiarEstado(id, nuevoEstado) {
         JSON.stringify(biblioteca)
     );
 }
+
+export function quitarBiblioteca(id) {
+    biblioteca = biblioteca.filter(
+        (juego) => juego.id !== id
+    );
+
+    localStorage.setItem(
+        "biblioteca",
+        JSON.stringify(biblioteca)
+    );
+}
