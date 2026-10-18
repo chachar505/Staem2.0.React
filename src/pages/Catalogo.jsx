@@ -6,7 +6,6 @@ import "./Catalogo.css";
 
 function Catalogo() {
     const [busqueda, setBusqueda] = useState("");
-    //const [estadoSeleccionado, setEstadoSeleccionado] = useState("");
     const [generoSeleccionado, setGeneroSeleccionado] = useState("");
     const [plataformaSeleccionada, setPlataformaSeleccionada] = useState("");
 
@@ -20,7 +19,6 @@ function Catalogo() {
 
         return videojuegos.filter((juego) => {
             const coincideNombre = juego.nombre.toLocaleLowerCase("es").includes(texto);
-            //const coincideEstado = !estadoSeleccionado || juego.estado === estadoSeleccionado;
             const coincideGenero = !generoSeleccionado || juego.genero === generoSeleccionado;
             const coincidePlataforma = !plataformaSeleccionada || juego.plataforma === plataformaSeleccionada;
 
